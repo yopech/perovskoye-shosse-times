@@ -1,0 +1,8 @@
+reportlab>=4,<5
+pypdf>=5,<7
+Pillow>=11,<13
+Telethon>=1.42,<2
+icalendar>=6,<8
+recurring-ical-events>=3,<4
+fonttools>=4.50,<5
+tzdata>=2025.3

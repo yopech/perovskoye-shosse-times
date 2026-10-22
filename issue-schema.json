@@ -1,0 +1,230 @@
+{
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string"
+    },
+    "packet_sha256": {
+      "type": "string"
+    },
+    "demo": {
+      "type": "boolean"
+    },
+    "editorial_line": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "essentials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "headline": {
+            "type": "string",
+            "maxLength": 65
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 350
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "event_key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "headline",
+          "body",
+          "source_ids",
+          "priority",
+          "event_key"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 3
+    },
+    "mail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "headline": {
+            "type": "string",
+            "maxLength": 65
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 350
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "event_key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "headline",
+          "body",
+          "source_ids",
+          "priority",
+          "event_key"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 4
+    },
+    "chats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "headline": {
+            "type": "string",
+            "maxLength": 65
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 350
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "event_key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "headline",
+          "body",
+          "source_ids",
+          "priority",
+          "event_key"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 3
+    },
+    "news": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "headline": {
+            "type": "string",
+            "maxLength": 65
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 350
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "event_key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "headline",
+          "body",
+          "source_ids",
+          "priority",
+          "event_key"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 2
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "headline": {
+            "type": "string",
+            "maxLength": 65
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 350
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "event_key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "headline",
+          "body",
+          "source_ids",
+          "priority",
+          "event_key"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 2
+    }
+  },
+  "required": [
+    "date",
+    "packet_sha256",
+    "demo",
+    "editorial_line",
+    "essentials",
+    "mail",
+    "chats",
+    "news",
+    "events"
+  ],
+  "additionalProperties": false
+}

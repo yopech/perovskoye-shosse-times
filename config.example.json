@@ -1,0 +1,73 @@
+{
+  "title": "The Perovskoye Shosse Times",
+  "masthead_font": "Chomsky",
+  "tagline": "Расписание, письма и главное за день",
+  "section_titles": {
+    "agenda": "Сегодняшние делишки",
+    "mail": "Разгребаем почту",
+    "chats": "Пока ты не читал чаты",
+    "news": "Главное в России и Мире",
+    "events": "Куда сходить с кайфом",
+    "meme": "Щитпост дня"
+  },
+  "timezone": "Europe/Moscow",
+  "prepare_time": "07:35",
+  "print_time": "08:00",
+  "print_cutoff": "08:30",
+  "printer": null,
+  "print_enabled": false,
+  "telegram": {
+    "folders": [],
+    "digest": [],
+    "business": [],
+    "running": [],
+    "exhibitions": [],
+    "meme": "",
+    "resolved_ids": {},
+    "max_messages_per_chat": 200,
+    "max_messages_total": 800,
+    "max_text_characters_total": 90000,
+    "max_text_characters_per_chat": 6000,
+    "max_lookback_days": 7
+  },
+  "interests": {
+    "business": "Открытые встречи, open talk и Q&A с основателями, владельцами и топ-руководителями известных компаний. Не включать обычные вебинары, рекламу курсов и мотивационные марафоны.",
+    "running": "Анонсы совместных пробежек: дата, время, точка сбора, дистанция, темп, условия участия. Также отмены и переносы.",
+    "exhibitions": "Новые выставки фотографии, современного искусства и живописи в Москве: название, площадка, даты, стоимость, ссылка.",
+    "city": "Москва"
+  },
+  "news": {
+    "allowed_domains": [
+      "reuters.com",
+      "bbc.com",
+      "bbc.co.uk",
+      "meduza.io"
+    ],
+    "priority": "Россия; мир, если событие существенно",
+    "max_stories": 2,
+    "policy": "Только согласованные редакции. Государственные агитресурсы и анонимные политические каналы не использовать как редакционные источники. Заявления атрибутировать, спорное проверять по независимым друг от друга публикациям; не выдавать перепечатки одного заявления за два подтверждения. Отделять факты от мнений и сохранять неопределенность."
+  },
+  "mail": {
+    "host": "imap.yandex.ru",
+    "max_messages": 30,
+    "lookback_days": 3
+  },
+  "personal_mail": {
+    "provider": "gmail",
+    "address": "",
+    "max_messages": 30,
+    "lookback_days": 3
+  },
+  "layout": {
+    "pages": 1,
+    "body_pt": 10.5,
+    "columns": 2
+  },
+  "editor": {
+    "provider": "chatgpt_subscription",
+    "api_budget_rub": 0
+  },
+  "windows": {
+    "sumatra_path": ""
+  }
+}

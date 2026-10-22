@@ -1,0 +1,13 @@
+/.venv/
+/config.json
+/data/
+/output/
+/schedule/
+/.coverage
+/.pytest_cache/
+**/__pycache__/
+*.py[cod]
+*.session*
+.env*
+.DS_Store
+*.log
