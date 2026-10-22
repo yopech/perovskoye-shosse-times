@@ -372,8 +372,12 @@ def printers():
     if WINDOWS:
         from windows_backend import printers as windows_printers
         return windows_printers()
-    r = subprocess.run(["/usr/bin/lpstat", "-p"], capture_output=True, text=True, env={**os.environ,"LC_ALL":"C"})
-    return re.findall(r"^printer (\S+)", r.stdout, re.M)
+    r = subprocess.run(["/usr/bin/lpstat", "-a"], capture_output=True, text=True, timeout=10,
+        env={**os.environ,"LC_ALL":"C"})
+    if r.returncode:
+        raise RuntimeError('Не удалось прочитать системную очередь печати')
+    # The first field is the queue name even when macOS localizes the status text.
+    return [line.split()[0] for line in r.stdout.splitlines() if line.strip()]
 
 
 def status():
@@ -484,7 +488,7 @@ def setup():
             elif choice == "4":
                 available = printers()
                 if not available:
-                    print("Принтер пока не найден. Подключи его кабелем и добавь в настройках macOS.")
+                    print("Принтер пока не найден. Подключи его и добавь в настройках системы.")
                     continue
                 for i, name in enumerate(available,1):
                     print(f"{i}. {name}")

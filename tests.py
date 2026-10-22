@@ -68,6 +68,11 @@ class SafetyTests(unittest.TestCase):
             stdout="идентификатор запроса: Test_HP-42 (1 файл)",stderr="")):
             self.assertEqual(gazette.print_tick()["job_id"],"Test_HP-42")
 
+    def test_localized_printer_list(self):
+        with patch.object(gazette.subprocess,'run',return_value=SimpleNamespace(returncode=0,
+            stdout='Office_HP принимает запросы с утра\nSecond_Printer accepting requests since today\n')):
+            self.assertEqual(gazette.printers(),['Office_HP','Second_Printer'])
+
     def test_demo_never_auto_printed(self):
         self.ready(demo=True)
         with patch.object(gazette.subprocess,"run") as run:
