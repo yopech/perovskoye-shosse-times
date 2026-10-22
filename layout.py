@@ -73,7 +73,7 @@ def source_line(article, sources):
             if "figma" in address:
                 title = "Figma"
             else:
-                title = "Корпочта" if s.get("account", "corporate") == "corporate" else "Gmail"
+                title = "Письмо" if s.get("account", "corporate") == "corporate" else "Gmail"
         title = printable(title, "GazetteSans")[:60]
         if title in seen:
             continue
